@@ -16,7 +16,12 @@ ul, ol, li{
 button{
     cursor: pointer;
 }
-
+@font-face {
+    font-family: 'mediaeval';
+    src: url(./PorSiempreGótica.ttf) format('truetype');
+    font-weight: normal;
+    font-style: normal
+}
 
 :root{
     --color-primary: #000000;
@@ -26,7 +31,14 @@ button{
     --padding-standard: 1vw;
 }
 
+html, body{
+    scroll-behavior: smooth;
+    font-family: "mediaeval";
+}
+
+
 body{
+    position: relative;
     background-color: var(--color-primary);
     color: var(--color-secondary);
     width: 100vw;
@@ -34,6 +46,21 @@ body{
     overflow-x: hidden;
     overflow-y: hidden;
 }
+/* Estilo para o trilho da barra de rolagem */
+body::-webkit-scrollbar-track {
+    background: var(--color-third);
+    border-radius: 10px;
+}
+
+body::-webkit-scrollbar-thumb {
+    background-color: var(--color-secondary);
+    border-radius: 10px;
+    border: 2px solid var(--color-third);
+}
+body::-webkit-scrollbar-thumb:active {
+    background-color: var(--color-fourth); 
+}
+  
 
 h1{
     font-size: 64px;
@@ -48,6 +75,13 @@ header{
     justify-content: space-between;
     display: flex;
     padding: var(--padding-standard);
+}
+header ul{
+    display: flex;
+    width: 80%;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 5;
 }
 
 main{
@@ -64,19 +98,26 @@ main section{
     height: calc(100vh - 200px);
 }
 
-.pricipal div{
+
+.inicio{
     padding-top: 200px;
+}
+
+.inicio div{
     justify-content: space-between;
     height: 100%;
+    width: 60%;
 }
-
-
-.pricipal h2{
+.inicio h2{
     font-size: 96px;
 }
-.pricipal p{
+.inicio p{
     font-size: 48px;
     color: var(--color-third);
+}
+.inicio img{
+    height: 100%;
+    z-index: 2;
 }
 
 .ativicao{
@@ -88,6 +129,11 @@ main section{
     color: var(--color-third);
 }
 
-img{
-    z-index: 2;
+.linha{
+    position: absolute;
+    left: calc(50vw - 3px);
+    top: calc(100vh + 200px);
+    width: 3px;
+    height: calc((400vh - 800px)-200px);
+    background-color: var(--color-secondary);
 }
