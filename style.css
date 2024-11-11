@@ -69,12 +69,13 @@ h1{
 header{
     position: fixed;
     width: 100%;
-    height: 200px;
+    height: 150px;
     background-color: var(--color-primary);
     align-items: center;
     justify-content: space-between;
     display: flex;
     padding: var(--padding-standard);
+    z-index: 1;
 }
 header ul{
     display: flex;
@@ -87,7 +88,7 @@ header ul{
 main{
     display: flex;
     flex-direction: column;
-    width: 100%;
+    width: 100vw;
 }
 
 main section{
@@ -95,7 +96,14 @@ main section{
     display: flex;
     align-items: center;
     width: 100%;
-    height: calc(100vh - 200px);
+    height: 100vh;
+}
+main section p {
+    color: var(--color-third);
+    font-size: 36px;
+}
+main section h2 {
+    font-size: 34px;
 }
 
 
@@ -120,6 +128,49 @@ main section{
     z-index: 2;
 }
 
+.esquerda{
+    height: 100%;
+    width: 50%;
+    padding: var(--padding-standard);
+    padding-right: 20px;
+}
+.direita{
+    height: 100%;
+    width: 50%;
+    padding: var(--padding-standard);
+    padding-left: 20px;
+}
+
+
+.politica .direita div{
+    display: flex;
+}
+.politica .direita img{
+    width: 100px;
+    height: 100px;
+    border: 1px solid var(--color-secondary);
+}
+
+.epistemologia .direita{
+    position: relative;
+    color: var(--color-third);
+}
+
+.bola{
+    position: absolute;
+    width: 20vw;
+    height: 20vw;
+    border-radius: 50%;
+}
+#crencas{
+    border: 2px solid #00ff08b3;
+}
+#verdades{
+    border: 2px solid #ff0000b3;
+    left: 40;
+}
+
+
 .ativicao{
     font-size: 48px;
     background-color: transparent;
@@ -131,9 +182,9 @@ main section{
 
 .linha{
     position: absolute;
-    left: calc(50vw - 3px);
-    top: calc(100vh + 200px);
-    width: 3px;
-    height: calc((400vh - 800px)-200px);
+    left: calc(50vw - 2px);
+    top: calc(100vh - 100px);
+    width: 4px;
+    height: 400vh;
     background-color: var(--color-secondary);
 }
