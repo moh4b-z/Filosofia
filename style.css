@@ -22,6 +22,12 @@ button{
     font-weight: normal;
     font-style: normal
 }
+@font-face {
+    font-family: 'futuro';
+    src: url(./digitalGeometricBold.ttf) format('truetype');
+    font-weight: normal;
+    font-style: normal
+}
 
 :root{
     --color-primary: #000000;
@@ -33,9 +39,14 @@ button{
 
 html, body{
     scroll-behavior: smooth;
+}
+h1, h2, h3, h4{
     font-family: "mediaeval";
 }
-
+p, span{
+    font-family: "futuro";
+    font-size: 12px;
+}
 
 body{
     position: relative;
@@ -60,7 +71,6 @@ body::-webkit-scrollbar-thumb {
 body::-webkit-scrollbar-thumb:active {
     background-color: var(--color-fourth); 
 }
-  
 
 h1{
     font-size: 64px;
@@ -100,7 +110,7 @@ main section{
 }
 main section p {
     color: var(--color-third);
-    font-size: 36px;
+    font-size: 24px;
 }
 main section h2 {
     font-size: 34px;
@@ -180,11 +190,27 @@ main section h2 {
     color: var(--color-third);
 }
 
+#filosofos{
+    display: block;
+}
+
+.campoColuna{
+    display: flex;
+}
+
 .linha{
     position: absolute;
+    display: none;
     left: calc(50vw - 2px);
     top: calc(100vh - 100px);
     width: 4px;
     height: 400vh;
     background-color: var(--color-secondary);
+}
+
+footer{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
