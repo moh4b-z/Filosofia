@@ -22,12 +22,6 @@ button{
     font-weight: normal;
     font-style: normal
 }
-@font-face {
-    font-family: 'futuro';
-    src: url(./digitalGeometricBold.ttf) format('truetype');
-    font-weight: normal;
-    font-style: normal
-}
 
 :root{
     --color-primary: #000000;
@@ -44,7 +38,6 @@ h1, h2, h3, h4{
     font-family: "mediaeval";
 }
 p, span{
-    font-family: "futuro";
     font-size: 12px;
 }
 
@@ -88,7 +81,7 @@ header{
     z-index: 1;
 }
 header ul{
-    display: flex;
+    display: none;
     width: 80%;
     justify-content: space-between;
     align-items: center;
@@ -135,7 +128,6 @@ main section h2 {
 }
 .inicio img{
     height: 100%;
-    z-index: 2;
 }
 
 .esquerda{
@@ -149,6 +141,12 @@ main section h2 {
     width: 50%;
     padding: var(--padding-standard);
     padding-left: 20px;
+}
+
+
+#filosofia{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
 }
 
 
@@ -195,7 +193,18 @@ main section h2 {
 }
 
 .campoColuna{
-    display: flex;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 100px;
+    gap: 10px;
+}
+.campoColuna div{
+    display: grid;
+    grid-template-columns: 1fr 5fr;
+    gap: 10px;
+}
+.campoColuna div img{
+    height: 100%;
 }
 
 .linha{
