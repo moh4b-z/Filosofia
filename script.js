@@ -9,4 +9,9 @@ ativarScroll.addEventListener('click', function (event) {
     body.style.height = 'auto'
     ativarScroll.style.display = 'none'
     linha.style.display = 'flex'
+
+    window.scrollTo({
+        top: linha.offsetTop, 
+        behavior: 'smooth'  
+    })
 })
