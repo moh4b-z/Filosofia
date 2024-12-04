@@ -109,13 +109,13 @@ main section h2 {
     font-size: 34px;
 }
 
-
 .inicio{
     padding-top: 200px;
 }
 
 .inicio div{
-    justify-content: space-between;
+    align-items: center;
+    justify-content: center;
     height: 100%;
     width: 60%;
 }
@@ -148,7 +148,6 @@ main section h2 {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
 }
-
 
 .politica .direita div{
     display: flex;
@@ -194,17 +193,25 @@ main section h2 {
 
 .campoColuna{
     display: grid;
+    width: 100%;
+    height: 60%;
     grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: 100px;
-    gap: 10px;
+    grid-template-rows: auto;
+    gap: 40px;
 }
-.campoColuna div{
+.grupoTexto{
     display: grid;
     grid-template-columns: 1fr 5fr;
     gap: 10px;
 }
 .campoColuna div img{
+    width: 100%;
     height: 100%;
+    border: 3px solid var(--color-secondary);
+}
+.texto{
+    display: flex;
+    flex-direction: column;
 }
 
 .linha{
