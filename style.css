@@ -91,19 +91,23 @@ header ul{
 main{
     display: flex;
     flex-direction: column;
+    height: auto;
     width: 100vw;
+    overflow: hidden;
 }
 
 main section{
     padding: var(--padding-standard);
+    padding-top: 150px;
     display: flex;
     align-items: center;
-    width: 100%;
+    width: 100vw;
     height: 100vh;
+    overflow: hidden;
 }
 main section p {
     color: var(--color-third);
-    font-size: 24px;
+    font-size: 28px;
 }
 main section h2 {
     font-size: 34px;
@@ -115,7 +119,7 @@ main section h2 {
 
 .inicio div{
     align-items: center;
-    justify-content: center;
+    justify-content: end;
     height: 100%;
     width: 60%;
 }
@@ -129,55 +133,6 @@ main section h2 {
 .inicio img{
     height: 100%;
 }
-
-.esquerda{
-    height: 100%;
-    width: 50%;
-    padding: var(--padding-standard);
-    padding-right: 20px;
-}
-.direita{
-    height: 100%;
-    width: 50%;
-    padding: var(--padding-standard);
-    padding-left: 20px;
-}
-
-
-#filosofia{
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-}
-
-#politica .direita div{
-    display: flex;
-}
-#politica .direita img{
-    width: 100px;
-    height: 100px;
-    border: 3px solid var(--color-secondary);
-}
-
-.epistemologia .direita{
-    position: relative;
-    color: var(--color-third);
-}
-
-.bola{
-    position: absolute;
-    width: 20vw;
-    height: 20vw;
-    border-radius: 50%;
-}
-#crencas{
-    border: 2px solid #00ff08b3;
-}
-#verdades{
-    border: 2px solid #ff0000b3;
-    left: 40;
-}
-
-
 .ativicao{
     font-size: 48px;
     background-color: transparent;
@@ -187,21 +142,114 @@ main section h2 {
     color: var(--color-third);
 }
 
+.esquerda{
+    height: 100%;
+    width: 50%;
+    padding: var(--padding-standard);
+    padding-right: 5vw;
+}
+.direita{
+    height: 100%;
+    width: 50%;
+    padding: var(--padding-standard);
+    padding-left: 5vw;
+}
+
+
+#filosofia{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    padding: 2vw;
+    gap: 1vw 10vw;
+}
+#filosofia h2{
+    font-size: 48px;
+}
+#filosofia h4{
+    font-size: 48px;
+}
+.topo{
+    grid-column: 1/3;
+}
+.topo p{
+    font-size: 36px;
+}
+.miniTexto div{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.miniTexto div img{
+    height: 100%;
+}
+
+#filosofia .miniTexto .miniP{
+    font-size: 28px;
+}
+
+
+#etica .direita {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+#etica .direita div{
+    display: flex;
+}
+#etica .direita div img{
+    height: 50%;
+}
+
+
+#politica .direita{
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+#politica .direita div{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+#politica .direita img{
+    width: 8vw;
+    height: 8vw;
+    border: 3px solid var(--color-secondary);
+}
+
+#epistemologia .direita{
+    position: relative;
+    color: var(--color-third);
+}
+
+
 #filosofos{
     display: block;
+}
+
+#filosofos h2{
+    font-size: 36px;
+}
+
+#filosofos h4{
+    font-size: 32px;
 }
 
 .campoColuna{
     display: grid;
     width: 100%;
-    height: 60%;
+    height: auto;
+    max-height: 90%;
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: auto;
     gap: 40px;
 }
 .grupoTexto{
     display: grid;
-    grid-template-columns: 1fr 5fr;
+    grid-template-columns: 10vw 38vw;
+    grid-template-rows: 10vw;
     gap: 10px;
 }
 .campoColuna div img{
@@ -218,9 +266,9 @@ main section h2 {
     position: absolute;
     display: none;
     left: calc(50vw - 2px);
-    top: calc(100vh - 100px);
+    top: 140vh;
     width: 4px;
-    height: 400vh;
+    height: 460vh;
     background-color: var(--color-secondary);
 }
 
