@@ -115,11 +115,12 @@ main section h2 {
 
 .inicio{
     padding-top: 200px;
+    align-items: center;
 }
 
 .inicio div{
-    align-items: center;
-    justify-content: end;
+    display: flex;
+    flex-direction: column;
     height: 100%;
     width: 60%;
 }
@@ -134,6 +135,7 @@ main section h2 {
     height: 100%;
 }
 .ativicao{
+    width: 20vw;
     font-size: 48px;
     background-color: transparent;
     border: 1px solid var(--color-secondary); 
@@ -184,9 +186,6 @@ main section h2 {
     height: 100%;
 }
 
-#filosofia .miniTexto .miniP{
-    font-size: 28px;
-}
 
 
 #etica .direita {
@@ -217,11 +216,6 @@ main section h2 {
     width: 8vw;
     height: 8vw;
     border: 3px solid var(--color-secondary);
-}
-
-#epistemologia .direita{
-    position: relative;
-    color: var(--color-third);
 }
 
 
@@ -277,4 +271,100 @@ footer{
     display: flex;
     align-items: center;
     justify-content: center;
+}
+
+
+@media (max-width: 735px){
+    body{
+        height: auto;
+        overflow-y: auto;
+    }
+    header{
+        justify-content: center;
+        height: 75;
+        position: none;
+        height: 70px;
+    }
+    
+    main section{
+        flex-direction: column;
+        height: auto;
+    }
+    main section p {
+        font-size: 14px;
+    }
+    main section h2 {
+        font-size: 17px;
+    }
+    
+    .inicio div{
+        height: auto;
+        width: 100%;
+    }
+    .inicio h2{
+        font-size: 32px;
+    }
+    .inicio p{
+        font-size: 24px;
+        padding: 10px;
+    }
+    .inicio img{
+        display: none;
+    }
+    .ativicao{
+        display: none;
+    }
+
+
+
+    
+    #epistemologia{
+        flex-direction: column;
+    }
+
+    #epistemologia div{
+        width: 100%;
+        align-items: center;
+        padding: 10px;
+    }
+
+    #epistemologia div img{
+        width: 100%;
+    }
+
+
+
+    #filosofos{
+        display: block;
+    }
+    
+    #filosofos h2{
+        font-size: 36px;
+    }
+    
+    #filosofos h4{
+        font-size: 32px;
+    }
+    
+    .campoColuna{
+        max-height: auto;
+        grid-template-columns: repeat(1, 1fr);
+    }
+    .grupoTexto{
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: auto;
+        padding: 20px;
+        gap: 10px;
+    }
+    .campoColuna div img{
+        width: 30vw;
+        height: 30vw;
+        border: 3px solid var(--color-secondary);
+    }
+    .texto{
+        display: flex;
+        flex-direction: column;
+    }
+
 }
